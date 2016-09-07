@@ -1,4 +1,5 @@
 Diktat/*.lyx~
+Diktat/#*.lyx#
 Exams/*.aux
 Exams/*.log
 Exams/*.synctex.gz
