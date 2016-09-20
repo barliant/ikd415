@@ -1,79 +1,37 @@
-= IKB450 Log Book =
+= IKD41 Log Book =
 
 == Pendahuluan ==
 
-Kuputuskan menggunakan format wiki, karena beberapa alasan:
+Diputuskan menggunakan format wiki, karena beberapa alasan:
 
 * More portable, since it's a plain text.
 * Independent of certain tools. Simple text editor will do.
 
 
 == Hari Pelaksanaan Kuliah ==
-* Semester Gasal 2015/2016: Rabu, 10.00 - 12.30
+* Semester Gasal 2016/2017:
+  * Senin, 08.00 - 09.40
+  * Jumat, 08.00 - 09.40
 
 
 == To Do ==
 * Set property folder Exams: *.aux, *.log, *.synctex.gz.
-* Struktur IMRD saat menulis Laporan, menulis Proposal, membaca
-  Literatur.
-* Pemahaman waktu menulis. Belajar dari Bird by Bird-nya Anne Lamott.
-* Mengolah data bibliografi di MSWord
-* Menyusun presentasi
-* Menelaah makalah ilmiah
-* Seri pertanyaan 4W1H
-* Perkembangan pekanan
-* Caption dan Daftar Gambar serta Daftar Tabel
-* Presentasi kemajuan pekerjaan Review Literatur
-* Apa itu Abstrak? Abstrak atau Abstraksi?
-* Menugaskan satu makalah kepada masing-masing mahasiswa untuk
-  dikerjakan: Dibaca, dicoba untuk dipahami, disampaikan dalam
-  presentasi kemajuan.
 
 
 == Log ==
-* 20150831, Senin
-  * Persiapan semester baru. Ada perubahan kurikulum, yang berbasis ke
-    KKNI. Banyak pekerjaan yang masih harus diselesaikan, terutama
-    pemetaan _Learning Outcomes_ yang "dititipkan" ke beberapa mata
-    kuliah.
-* 2014 Sep 18, Kamis
-  * Memotivasi peserta kuliah untuk menulis.
-  * Membiasakan diri menulis di blog masing-masing.
-  * Problem: Masih ada beberapa mahasiswa yang nggak aktif kuliah.
-    General nih rasanya, nggak cuma satu-dua mata kuliah. Perlu
-    direkap.
-* 2014 03 25, Selasa
-  * 13 orang mahasiswa hadir.
-  * 7 orang menyampaikan presentasi kemajuan.
-  * 31 orang terdaftar sebagai peserta kuliah.
-  * Kesimpulannya: Lambat!
-* 2014 03 11, Selasa
-  * Paparan proses Pra-yudisium hingga Yudisium.
-  * Tugas tulisan identifikasi topik.
-* 2014 03 10, Senin
-  * Persiapan kuliah hari Selasa besok: Pre-test. Slide presentasi, 
-    isinya tentang motivasi awal kenapa ada dua kuliah terpisah.
-  * property folder Exams perlu di-set.
-* 20140309, Minggu
-  * Persiapan perkuliahan semester Genap 2013/2014.
-  * Spreadsheet nilai.
-* 20130710, Rabu.
-  * Pindahan ke Acer.
-* 20130521, Rabu
-  * svn relocate.
-* 20130409.
-  * Bagaimana mencari literatur di internet.
-  * Bagaimana memahami struktur makalah ilmiah.
-  * Sumber-sumber makalah di internet untuk bidang Komputasi / Ilmu
-    Komputer: !CiteSeerX, !CiteULike.org, Google Scholars.
-  * Cara penulisan Bibliografi dengan gaya American Pyschological
-    Association.
-  * Pertanyaan dari mahasiswa tentang apa sebaiknya yang dibuat
-    dalam sebuah Tugas Akhir.
-  * Motivasi utama penyusunan Tugas Akhir pada level Strata 1.
-* 20130326.
-  * Menggali lagi topik-topik Penelitian yang menarik untuk diangkat.
-  * Menggunakan zotero dan perangkat bantu bibliografi yang
-    tersedia.
-  * Panduan penulisan tugas akhir.
-  * Penyeragaman redaksi lembar keaslian tugas akhir.
+* 20160826, Jumat
+  * Administratif kuliah
+  * sistem poin kehadiran
+* 20160829, Senin
+* 20160902, Jumat
+  * Kelas batal karena ada seminar BEM FTI.
+  * Digantikan dengan latihan mengubah script Python dan meringkas seminar.
+* 20160905, Senin
+* 20160909, Jumat
+* 20160913, Senin
+* 20160916, Jumat
+  * Perceptron
+  * Bias dan threshold
+* 20160919, Senin
+  * Multi Layer Perceptron
+  * Back propagation
