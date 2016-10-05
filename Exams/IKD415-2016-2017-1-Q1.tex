@@ -1,0 +1,225 @@
+\documentclass[a4paper,12pt,answers]{exam}
+%% \documentclass[a4paper,12pt]{exam}
+\usepackage[bahasa]{babel}
+\usepackage{graphicx}
+\usepackage{fancyvrb}
+\usepackage{epic}
+\usepackage{ecltree}
+%\usepackage{pstricks,pst-node}
+%\usepackage{vaucanson-g}
+%\usepackage[a4paper]{geometry}
+\usepackage{wordlike}
+\usepackage{xifthen}
+\usepackage{algorithmic}
+
+%%%%%%% Packages initializations
+%% Paper sizes
+%\geometry{left=3cm}
+%\geometry{top=3cm}
+%\geometry{right=3cm}
+%\geometry{bottom=3cm}
+
+\fvset{fontsize=\scriptsize,numbers=left,frame=leftline}
+%\fvset{fontsize=\scriptsize,frame=leftline}
+
+%% Season-based settings and Conditionals, xifthen
+\newboolean{SemesterReguler}
+\newboolean{Quiz}
+\newboolean{AdaPejabatJurusan}
+\newboolean{JawabanLangsung}
+\newboolean{NamaAlias}
+\newboolean{AdaKodeSoal}
+
+\setboolean{SemesterReguler}{true}
+\setboolean{Quiz}{true}
+\setboolean{AdaPejabatJurusan}{false}
+% Jawaban ditulis di lembar soal? true kalo iya. Jangan lupa menyalakan opsi answer.
+\setboolean{JawabanLangsung}{true}
+\setboolean{NamaAlias}{false}
+\setboolean{AdaKodeSoal}{false}
+
+% NamaAlias muncul jika:
+% Quiz, atau
+% Ujian, dan JawabanLangsung
+
+%% Locale
+\newcommand{\universitas}{Universitas Trisakti}
+\newcommand{\fakultas}{Fakultas Teknologi Industri}
+\newcommand{\programstudi}{Teknik Informatika, Sistem Informasi}
+\newcommand{\namakuliah}{Intelijen Data}
+\newcommand{\kodekuliah}{IKD415}
+\newcommand{\tipeujian}{Kuis 1}
+\newcommand{\semester}{Semester Gasal 2016/2017}
+\newcommand{\tanggalujian}{Jumat, 30 September 2016}
+\newcommand{\waktuujian}{30 menit}
+\newcommand{\sifatujian}{Buka buku}
+\newcommand{\dosenkoordinator}{(Anung B Ariwibowo, MKom)}
+\newcommand{\kodesoal}{\fbox{Soal B}}
+
+\ifthenelse{\boolean{AdaPejabatJurusan}}{
+	\newcommand{\kajursekjur}{(Ahmad Zuhdi, SSi, MKom)}
+}
+{
+	\newcommand{\kajursekjur}{(\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots)}
+}
+\newcommand{\ralat}[1]{\textbf{(RALAT: #1)}}
+
+\renewcommand{\solutiontitle}{\noindent\textbf{Jawab:}\par\noindent}
+\renewcommand{\partlabel}{\thepartno.}
+\vqword{Nomor}
+\hqword{Nomor}
+\vpword{Poin}
+\hpword{Poin}
+\vsword{Nilai}
+\hsword{Nilai}
+\pointsinmargin
+\boxedpoints
+\addpoints
+
+\pagestyle{headandfoot}
+\runningheadrule
+\footrule
+%\header{\namakuliah \\ \kodekuliah}{}{60.Kul.1TIF/R.0 \\ \tanggalujian}
+\ifthenelse{\boolean{AdaKodeSoal}}{
+  \firstpageheader{\kodesoal}{}{60.Kul.1TIF/R.0}
+}
+{
+  \firstpageheader{}{}{60.Kul.1TIF/R.0}
+}
+\runningheader{\namakuliah \\ \kodekuliah}{}{60.Kul.1TIF/R.0 \\ \tanggalujian}
+%%\lhead[]{\namakuliah \\ \kodekuliah}
+%%\rhead[]{60.Kul.1TIF/R.0 \\ \tanggalujian}
+\cfoot{\iflastpage{Halaman \thepage\ dari \numpages\\Kelulusan bukan ditentukan oleh hasil kerja teman anda.}{Halaman \thepage\ dari \numpages}}
+% Selamat bekerja dengan kejujuran
+
+%%\cfoot{\iflastpage{Halaman \thepage\ dari \numpages\\Orang yang dicontek tidak lebih tahu daripada Orang yang mencontek.}{Halaman \thepage\ dari \numpages}}
+
+%% package ecltree
+\setlength{\GapWidth}{10mm}
+%%%%%%% Packages initializations
+
+\begin{document}
+\ifthenelse{\boolean{Quiz}}{
+	% SEMESTER PENDEK or QUIZ
+	\begin{center}
+	% \begin{coverpages}
+		{\bf
+			\parbox{5.5in}{\centering
+				{\Large
+					\fakultas\ -- \universitas
+					
+					\programstudi
+				}
+				\vspace{0.5cm}
+				
+				{\large
+					\semester
+					
+					\namakuliah\ -- \kodekuliah
+				}
+				\vspace{0.5cm}
+				
+				{\small
+					\tipeujian , \tanggalujian\
+					
+					\waktuujian\ -- \sifatujian
+				}
+				\vspace{1.5cm}
+			}
+		}
+		\vspace{0.5cm}
+		\hbox to \textwidth{Nama : \enspace\hrulefill}
+		\vspace{0.5cm}
+		\hbox to \textwidth{NIM : \enspace\hrulefill}
+		\ifthenelse{\boolean{NamaAlias}}{
+			\vspace{0.5cm}
+			\hbox to \textwidth{e-mail: \enspace\hrulefill}
+			\vspace{0.5cm}
+			\hbox to \textwidth{Nomor HP aktif: \enspace\hrulefill}
+			\vspace{0.5cm}
+			\hbox to \textwidth{Nama alias \footnote{Nama alias digunakan untuk mengumumkan nilai.}: \enspace\hrulefill}
+		}
+		
+		\vspace{1.0cm}
+		\gradetable[h][questions]
+	% \end{coverpages}
+	\end{center}
+}
+{
+	% EXAM
+	\begin{center}
+	  {\bf
+	    {\centering {\Large
+	      \fakultas\ -- \universitas } \\ \large{ \programstudi } \\ \normalsize{\tipeujian \\ \semester }
+	    }
+	    \vspace{0.5cm}
+	    \hrule
+	    {\small
+	      \vspace{1cm}
+	      \begin{tabular}{p{0.5\textwidth}p{0.3\textwidth}}
+	        \namakuliah\ -- \kodekuliah & \multicolumn{1}{r}{\sifatujian} \\
+	        \tanggalujian\ & \multicolumn{1}{r}{\waktuujian} \\
+	        & \\
+	        \multicolumn{1}{c}{\emph{Koordinator Mata Kuliah}} &
+	        \multicolumn{1}{c}{\emph{Diperiksa dan Disetujui oleh}} \\
+	        & \multicolumn{1}{c}{Ketua Progam Studi / Sekjur} \\
+	        & \\
+	        & \\
+	        & \\
+	        \multicolumn{1}{c}{\dosenkoordinator} & \multicolumn{1}{c}{\kajursekjur} \\
+	      \end{tabular}
+	    }
+	  }
+	  \vspace{0.5cm}
+	  \hrule
+	  \vspace{0.1cm}
+	  Ujian ini terdiri atas \numpages~halaman, \numquestions~soal, dan \numpoints~poin.
+	  \ifthenelse{\boolean{JawabanLangsung}}{
+			\vspace{0.5cm} %\hbox to \textwidth{Nama : \enspace\hrulefill}
+			Nama : \enspace\hrulefill
+			\vspace{0.5cm} %\hbox to \textwidth{NIM : \enspace\hrulefill}
+			NIM : \enspace\hrulefill
+			
+			\vspace{0.2cm} {\footnotesize \gradetable[h][questions]}
+		}
+	\end{center}
+}
+
+% A 1 2 3 4
+% B 2 1 3 4
+% C 2 1 4 3
+% D 3 1 2 4
+\begin{questions}
+  \ifthenelse{\boolean{NamaAlias}}{
+  \question Tuliskan nama alias, jika anda menghendaki identitas anda disamarkan saat nilai sementara diumumkan sepanjang perkuliahan berlangsung.
+  }
+  
+  
+  \question[10] Diberikan dua buah titik dalam ruang \emph{Cartesian} $A = (10, 8)$ dan $B = (-9, 4)$. Tuliskan persamaan garis yang melalui kedua titik tersebut.
+  \begin{solution}
+    \vspace{5.0cm}
+  \end{solution}
+  
+  
+  \question[10] Dari sekian banyak algoritme yang ada, terdapat dua kelompok algoritme \emph{Machine Learning}, yakni \emph{Penalized Regression} dan \emph{Ensemble Methods}. Jelaskan perbedaan di antara kedua jenis algoritme tersebut dari sudut pandang \textbf{akurasi} dan \textbf{waktu pembelajaran}.
+  \begin{solution}
+    \vspace{5.0cm}
+  \end{solution}
+  
+  
+  \question[10] Diketahui sebuah \emph{neural network} yang tersusun atas \emph{perceptron} memiliki dua lapis, \emph{input layer} dan \emph{output layer}. Perceptron di input layer terdiri dari 4 neuron, dan di output layer terdapat 2 neuron. Jika diketahui nilai \emph{bias} adalah $b = 2$ matriks bobot di antara input layer dan output layer adalah
+  \[
+  \left(\begin{array}{cc}
+  -2 & 2 \\
+  2 & -2 \\
+  1 & 2 \\
+  2 & 1 \\
+  \end{array}
+  \right)
+  \]
+  Tuliskan sinyal yang dikeluarkan oleh kedua neuron di output layer, jika neural network tersebut mendapatkan sinyal input $(1, 0, 1, 0)$.
+  \begin{solution}
+    \vspace{5.0cm}
+  \end{solution}
+\end{questions}
+\end{document}

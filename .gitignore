@@ -2,6 +2,7 @@ Diktat/*.lyx~
 Diktat/#*.lyx#
 Exams/*.aux
 Exams/*.log
+Exams/*.pdf
 Exams/*.synctex.gz
 Lab/*.zip
 Lab/mike-bowles/02/chapter02.zip
