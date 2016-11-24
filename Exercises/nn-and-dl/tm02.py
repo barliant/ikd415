@@ -3,8 +3,8 @@ import network
 
 # sesuaikan nilai epoch dan hidden_layer_size
 # sesuai percobaan yang dilakukan
-epoch = 30
-hidden_layer_size = 30
+epoch = 60
+hidden_layer_size = 0
 
 train, valid, test = mnist_loader.load_data_wrapper()
 net = network.Network([784, hidden_layer_size, 10])
