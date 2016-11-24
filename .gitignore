@@ -1,13 +1,8 @@
 *.pyc
+*.lyx~
+#*.lyx#
 *.aux
 *.log
+*.pdf
 *.synctex.gz
 *.zip
-Diktat/*.lyx~
-Diktat/#*.lyx#
-Exams/*.pdf
-Lab/mike-bowles/02/chapter02.zip
-Lab/mike-bowles/03/chapter03.zip
-Lab/mike-bowles/04/chapter04.zip
-Lab/mike-bowles/05/chapter05.zip
-Lab/mike-bowles/06/chapter06.zip

@@ -1,0 +1,36 @@
+Epoch:  30 Hidden layer:  0
+Epoch 29: 1135 / 10000
+
+Epoch:  30 Hidden layer:  30
+Epoch 29: 9495 / 10000
+
+Epoch:  30 Hidden layer:  60
+Epoch 29: 9611 / 10000
+
+Epoch:  30 Hidden layer:  90
+Epoch 29: 9602 / 10000
+
+Epoch:  60 Hidden layer:  0
+Epoch 59: 958 / 10000
+
+Epoch:  60 Hidden layer:  30
+Epoch 59: 9522 / 10000
+
+Epoch:  60 Hidden layer:  60
+Epoch 59: 9610 / 10000
+
+Epoch:  60 Hidden layer:  90
+Epoch 59: 9663 / 10000
+
+Epoch:  90 Hidden layer:  0
+Epoch 89: 1135 / 10000
+
+Epoch:  90 Hidden layer:  30
+Epoch 89: 9509 / 10000
+
+Epoch:  90 Hidden layer:  60
+Epoch 89: 9602 / 10000
+
+Epoch:  90 Hidden layer:  90
+Epoch 89: 8532 / 10000
+
